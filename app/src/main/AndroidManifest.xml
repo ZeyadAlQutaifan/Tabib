@@ -10,7 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tabib">
         <activity
-            android:name=".MainActivity"
+            android:name="screens.LoginActivity"
+            android:exported="true" >
+
+        </activity>
+        <activity
+            android:name="screens.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
