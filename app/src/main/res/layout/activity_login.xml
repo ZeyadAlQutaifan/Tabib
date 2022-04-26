@@ -97,6 +97,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="32dp"
+        android:onClick="toHome"
         android:background="@drawable/blue_button_background"
         android:paddingHorizontal="32dp"
         android:text="تسجيل الدخول"

@@ -47,6 +47,7 @@
                         android:id="@+id/imageView6656"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
+                        android:src="@drawable/experimental_doctors_consultation"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp" />
 
@@ -80,16 +81,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/imageViewiui"
-
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
-
                         android:text="الاشعارات"
                         android:textSize="20sp" />
 
                     <ImageView
                         android:id="@+id/imageViewiui"
                         android:layout_width="100dp"
+                        android:src="@drawable/bonbon_bell_with_notification_icon"
                         android:layout_height="100dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp" />
@@ -126,6 +126,7 @@
                         android:id="@+id/imageViewoo"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
+                        android:src="@drawable/sammy_scientist_with_glasses_is_working_on_a_vaccine"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp" />
 
@@ -167,6 +168,7 @@
                     <ImageView
                         android:id="@+id/imageViewiui1"
                         android:layout_width="100dp"
+                        android:src="@drawable/pale_doctor_1"
                         android:layout_height="100dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp" />
@@ -203,6 +205,7 @@
                         android:id="@+id/imageViewHooyyaaa"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
+                        android:src="@drawable/polar_dentistry"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp" />
 
@@ -235,7 +238,7 @@
                         android:id="@+id/imageViewHooyyaaa1"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-
+                        android:src="@drawable/clip_medical_doctor"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp" />
 
