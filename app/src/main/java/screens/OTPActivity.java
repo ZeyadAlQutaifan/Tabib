@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -32,17 +33,14 @@ public class OTPActivity extends AppCompatActivity {
         otp_box_1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
             }
 
             @Override
             public void afterTextChanged(Editable editable) {
-
                 if(editable!=null){
                     if(editable.length()==1)
                         otp_box_2.requestFocus();
@@ -52,12 +50,10 @@ public class OTPActivity extends AppCompatActivity {
         otp_box_2.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
             }
 
             @Override
@@ -125,5 +121,8 @@ public class OTPActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void register_user_click(View view) {
     }
 }

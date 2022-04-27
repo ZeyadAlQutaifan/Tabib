@@ -222,6 +222,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="24dp"
                     android:text="VERIFY"
+                    android:onClick="register_user_click"
                     android:textAllCaps="false"
                     android:textColor="#ffffff"
                     android:textSize="16sp" />
