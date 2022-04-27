@@ -29,14 +29,14 @@
                     android:layout_width="210dp"
                     android:layout_height="210dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/bloom_a_man_looks_into_an_empty_mailbox_with_cobwebs" />
+                    android:src="@drawable/a_authentication_pana" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="16dp"
-                    android:text="OTP Verification"
+                    android:text="تأكيد رقم الهاتف"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="28sp"
@@ -199,7 +199,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:layout_marginTop="16dp"
-                    android:text="Don't recieve the OTP?"
+                    android:text="الم تستلم رمز؟"
                     android:textAlignment="center"
                     android:textColor="#a3a3a3"
                     android:textSize="16sp" />
@@ -207,7 +207,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:text="RESEND OTP"
+                    android:text="اعادة ارسال"
                     android:textAlignment="center"
                     android:textSize="16sp" />
 
@@ -221,7 +221,9 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="24dp"
-                    android:text="VERIFY"
+                    android:background="@drawable/blue_button_background"
+                    android:paddingVertical="10dp"
+                    android:text="تأكيد وانشاء الحساب"
                     android:onClick="register_user_click"
                     android:textAllCaps="false"
                     android:textColor="#ffffff"

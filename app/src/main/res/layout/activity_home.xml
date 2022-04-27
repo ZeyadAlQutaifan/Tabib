@@ -47,9 +47,9 @@
                         android:id="@+id/imageView6656"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/experimental_doctors_consultation"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="15dp" />
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/a_science_amico" />
 
                     <TextView
                         android:id="@+id/textView654"
@@ -89,10 +89,10 @@
                     <ImageView
                         android:id="@+id/imageViewiui"
                         android:layout_width="100dp"
-                        android:src="@drawable/bonbon_bell_with_notification_icon"
                         android:layout_height="100dp"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="15dp" />
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/a_push_notifications_rafiki" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
@@ -126,9 +126,9 @@
                         android:id="@+id/imageViewoo"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/sammy_scientist_with_glasses_is_working_on_a_vaccine"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="15dp" />
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/a_medicine_amico" />
 
                     <TextView
                         android:id="@+id/textViewoo"
@@ -168,10 +168,10 @@
                     <ImageView
                         android:id="@+id/imageViewiui1"
                         android:layout_width="100dp"
-                        android:src="@drawable/pale_doctor_1"
                         android:layout_height="100dp"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="15dp" />
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/a_x_ray" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
@@ -205,9 +205,9 @@
                         android:id="@+id/imageViewHooyyaaa"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/polar_dentistry"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="15dp" />
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/a_contact_doctor" />
 
                     <TextView
                         android:id="@+id/textVieHooyaa"
@@ -238,9 +238,9 @@
                         android:id="@+id/imageViewHooyyaaa1"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/clip_medical_doctor"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="15dp" />
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/a_doctors_advice" />
 
                     <TextView
                         android:id="@+id/textVieHooyaa1"
