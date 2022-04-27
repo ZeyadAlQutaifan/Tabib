@@ -26,6 +26,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void toHome(View view) {
-        startActivity(new Intent(LoginActivity.this , HomeActivity.class));
+        startActivity(new Intent(LoginActivity.this , OTPActivity.class));
     }
 }

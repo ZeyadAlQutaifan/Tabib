@@ -2,6 +2,7 @@ package screens;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.Html;
@@ -124,5 +125,6 @@ public class OTPActivity extends AppCompatActivity {
     }
 
     public void register_user_click(View view) {
+        startActivity(new Intent(OTPActivity.this , HomeActivity.class));
     }
 }

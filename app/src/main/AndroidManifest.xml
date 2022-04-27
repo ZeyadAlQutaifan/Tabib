@@ -10,20 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tabib">
         <activity
+            android:name="screens.ResetPasswordActivity"
+            android:exported="false" />
+        <activity
             android:name="screens.MedicalRecordsActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name="screens.MedicalDrugsActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name="screens.OTPActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name="screens.HomeActivity"
             android:exported="false" />
@@ -37,6 +34,11 @@
             android:exported="false" />
         <activity
             android:name="screens.LoginActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name="screens.SplashActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,9 +46,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="screens.SplashActivity"
-            android:exported="true" />
     </application>
 
 </manifest>
