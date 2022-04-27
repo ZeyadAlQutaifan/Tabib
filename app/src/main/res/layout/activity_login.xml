@@ -49,15 +49,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
-
                 android:hint="البريد الالكتروني">
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
@@ -84,6 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="10dp"
+                android:onClick="toResetPassword"
                 android:text="هل نسيت كلمة السر؟ " />
 
 
@@ -98,8 +97,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="32dp"
-        android:onClick="toHome"
         android:background="@drawable/blue_button_background"
+        android:onClick="toHome"
         android:paddingHorizontal="32dp"
         android:text="تسجيل الدخول"
         android:textColor="@color/white"
@@ -125,10 +124,10 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="24dp"
+        android:src="@drawable/login_bro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-       android:src="@drawable/login_bro" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

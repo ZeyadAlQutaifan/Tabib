@@ -29,7 +29,7 @@
                     android:layout_width="210dp"
                     android:layout_height="210dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/a_authentication_pana" />
+                   />
 
                 <TextView
                     android:layout_width="match_parent"
