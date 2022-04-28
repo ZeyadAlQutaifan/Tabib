@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -115,4 +116,7 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
 
+    public void toVerifyOTP(View view) {
+        startActivity(new Intent(SignUpActivity.this , OTPActivity.class));
+    }
 }

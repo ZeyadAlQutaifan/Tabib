@@ -43,7 +43,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-
+                android:onClick="toIllnesses"
                 app:cardCornerRadius="5dp"
                 app:cardElevation="5dp">
 
@@ -201,7 +201,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-
+                android:onClick="toDoctors"
                 app:cardCornerRadius="5dp"
                 app:cardElevation="5dp">
 

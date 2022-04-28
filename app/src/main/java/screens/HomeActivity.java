@@ -23,4 +23,12 @@ public class HomeActivity extends AppCompatActivity {
     public void toMedicalDrugs(View view) {
         startActivity(new Intent(HomeActivity.this , MedicalDrugsActivity.class));
     }
+
+    public void toIllnesses(View view) {
+        startActivity(new Intent(HomeActivity.this , IllnessesActivity.class));
+    }
+
+    public void toDoctors(View view) {
+        startActivity(new Intent(HomeActivity.this , DoctorsActivity.class));
+    }
 }

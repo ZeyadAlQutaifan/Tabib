@@ -6,10 +6,13 @@
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/drawable/blue_button_background.xml" value="0.2195" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2195" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2195" />
+        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_doctors.xml" value="0.2" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_factivity.xml" value="0.2860196665241556" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_illnesses.xml" value="0.2359375" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_medical_advices.xml" value="0.25" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_medical_drugs.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_medical_records.xml" value="0.9" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_otpactivity.xml" value="0.25" />
@@ -33,7 +36,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.9" />
+        <option name="scale" value="0.2" />
       </ProjectState>
     </option>
   </component>
