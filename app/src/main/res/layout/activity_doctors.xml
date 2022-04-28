@@ -145,7 +145,7 @@
                             android:layout_marginStart="1dp"
                             android:text="الاتصال"
                             android:textColor="@color/white"
-                            app:icon="@drawable/ic_baseline_search_24" />
+                            app:icon="@drawable/ic_baseline_call_24" />
 
 
                     </LinearLayout>
