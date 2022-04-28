@@ -234,7 +234,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-
+                android:onClick="toMedicalAdvice"
                 app:cardCornerRadius="5dp"
                 app:cardElevation="5dp">
 
