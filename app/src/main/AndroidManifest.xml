@@ -9,29 +9,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tabib">
+
         <activity
-            android:name="screens.DoctorsActivity"
+            android:name="user_screens.DoctorsActivity"
             android:exported="false" />
         <activity
-            android:name="screens.MedicalAdvicesActivity"
+            android:name="user_screens.MedicalAdvicesActivity"
             android:exported="false" />
         <activity
-            android:name="screens.IllnessesActivity"
+            android:name="user_screens.IllnessesActivity"
             android:exported="false" />
         <activity
-            android:name="screens.ResetPasswordActivity"
+            android:name="user_screens.ResetPasswordActivity"
             android:exported="false" />
         <activity
-            android:name="screens.MedicalRecordsActivity"
+            android:name="user_screens.MedicalRecordsActivity"
             android:exported="true" />
         <activity
-            android:name="screens.MedicalDrugsActivity"
+            android:name="user_screens.MedicalDrugsActivity"
             android:exported="true" />
         <activity
-            android:name="screens.OTPActivity"
+            android:name="user_screens.OTPActivity"
             android:exported="true" />
         <activity
-            android:name="screens.HomeActivity"
+            android:name="user_screens.HomeActivity"
             android:exported="false" />
 
         <meta-data
@@ -39,13 +40,18 @@
             android:value="true" />
 
         <activity
-            android:name="screens.SignUpActivity"
+            android:name="user_screens.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name="screens.LoginActivity"
+            android:name="user_screens.LoginActivity"
             android:exported="true" />
         <activity
-            android:name="screens.SplashActivity"
+            android:name="user_screens.SplashActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name="doctor_screens.DoctorHomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

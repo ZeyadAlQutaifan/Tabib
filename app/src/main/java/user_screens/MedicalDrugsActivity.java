@@ -1,4 +1,4 @@
-package screens;
+package user_screens;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.tabib.R;
 
-public class MedicalRecordsActivity extends AppCompatActivity {
+public class MedicalDrugsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medical_records);
+        setContentView(R.layout.activity_medical_drugs);
     }
 }

@@ -6,6 +6,7 @@
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/drawable/blue_button_background.xml" value="0.2195" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2195" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2195" />
+        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_doctor_home.xml" value="0.3625" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_doctors.xml" value="0.2" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_factivity.xml" value="0.2860196665241556" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_home.xml" value="0.33" />
@@ -20,10 +21,15 @@
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_sign_up.xml" value="0.18" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_splash.xml" value="0.5" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_test.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_test_kotlin.xml" value="0.3625" />
+        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/fragment_test1.xml" value="0.3484375" />
+        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/fragment_test2.xml" value="0.3484375" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/item_blod.xml" value="0.3625" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/item_blood.xml" value="0.3569230769230769" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/item_rate.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/menu/bottom_nav_bar_content.xml" value="0.3625" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2195" />
+        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/xml/bottombar_tabs_color_changing.xml" value="0.3625" />
       </map>
     </option>
   </component>

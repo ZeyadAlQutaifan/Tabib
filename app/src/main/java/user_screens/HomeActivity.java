@@ -1,4 +1,4 @@
-package screens;
+package user_screens;
 
 import androidx.appcompat.app.AppCompatActivity;
 

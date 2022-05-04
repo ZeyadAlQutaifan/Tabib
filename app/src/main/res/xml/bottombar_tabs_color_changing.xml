@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_recents"
+        icon="@drawable/ic_baseline_home_24"
+        title="الرئيسية"
+        barColorWhenSelected="@color/white" />
+    <tab
+        id="@+id/tab_favorites"
+        icon="@drawable/ic_baseline_call_24"
+        title="Favorites"
+        barColorWhenSelected="@color/white" />
+    <tab
+        id="@+id/tab_nearby"
+        icon="@drawable/ic_baseline_chat_bubble_24"
+        title="المحادثات"
+        barColorWhenSelected="@color/white" />
+
+</tabs>
+
+

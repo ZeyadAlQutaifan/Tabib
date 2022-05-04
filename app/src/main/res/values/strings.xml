@@ -16,5 +16,7 @@
 
     <string name="otp"><![CDATA[<font color="#a3a3a3">We will send you an</font> <font color="#000000">One Time Password</font> <font color="#a3a3a3">on this mobile number</font>]]></string>
     <string name="otp1"><![CDATA[<font color="#a3a3a3">ادخل الرمز الذي ارسل الى </font> <font color="#000000">+962781234567</font>]]></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
