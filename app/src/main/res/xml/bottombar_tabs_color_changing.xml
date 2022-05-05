@@ -8,12 +8,12 @@
     <tab
         id="@+id/tab_favorites"
         icon="@drawable/ic_baseline_call_24"
-        title="Favorites"
+        title="الاستعلام"
         barColorWhenSelected="@color/white" />
     <tab
         id="@+id/tab_nearby"
         icon="@drawable/ic_baseline_chat_bubble_24"
-        title="المحادثات"
+        title="الاستشارات"
         barColorWhenSelected="@color/white" />
 
 </tabs>

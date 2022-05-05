@@ -6,15 +6,13 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.widget.FrameLayout;
-import android.widget.Toast;
 
 import com.example.tabib.R;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
-import doctor_screens.doctor_fragments.FragmentTest1;
-import doctor_screens.doctor_fragments.FragmentTest2;
+import doctor_screens.doctor_fragments.FragmentQueryPatient;
+import doctor_screens.doctor_fragments.FragmentHome;
 
 
 public class DoctorHomeActivity extends AppCompatActivity {
@@ -32,12 +30,12 @@ public class DoctorHomeActivity extends AppCompatActivity {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
                 if (tabId == R.id.tab_favorites) {
-                    FragmentTest1 fragment = new FragmentTest1();
+                    FragmentQueryPatient fragment = new FragmentQueryPatient();
                     fragmentTransaction.replace(R.id.container, fragment);
                    // fragmentTransaction.addToBackStack(fragment.toString());
                     fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
                 }else if (tabId == R.id.tab_recents){
-                    FragmentTest2 fragment = new FragmentTest2();
+                    FragmentHome fragment = new FragmentHome();
                     fragmentTransaction.replace(R.id.container, fragment);
                    // fragmentTransaction.addToBackStack(fragment.toString());
                     fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);

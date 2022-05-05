@@ -12,5 +12,6 @@
     <color name="background">#3D9ABA</color>
     <color name="primary">#81DAF8</color>
     <color name="secondary">#2961B4</color>
+    <color name="secondary2">#194280</color>
     <color name="textColor">#001D27</color>
 </resources>
