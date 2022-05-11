@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.tabib.R;
 
-public class PatientProfileActivity extends AppCompatActivity {
+public class PatientSearchActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_patient_profile);
+        setContentView(R.layout.activity_patien_search);
     }
 }

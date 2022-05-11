@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tabs>
     <tab
-        id="@+id/tab_recents"
+        id="@+id/tab_home"
         icon="@drawable/ic_baseline_home_24"
         title="الرئيسية"
         barColorWhenSelected="@color/white" />
     <tab
-        id="@+id/tab_favorites"
+        id="@+id/tab_search"
         icon="@drawable/ic_baseline_call_24"
         title="الاستعلام"
         barColorWhenSelected="@color/white" />
     <tab
-        id="@+id/tab_nearby"
+        id="@+id/tab_chats"
         icon="@drawable/ic_baseline_chat_bubble_24"
         title="الاستشارات"
         barColorWhenSelected="@color/white" />

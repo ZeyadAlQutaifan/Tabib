@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,9 +13,7 @@ import android.widget.Button;
 
 import com.example.tabib.R;
 
-import java.util.Objects;
-
-import doctor_screens.PatientProfileActivity;
+import doctor_screens.PatientSearchActivity;
 
 
 public class FragmentQueryPatient extends Fragment {
@@ -32,7 +28,7 @@ public class FragmentQueryPatient extends Fragment {
         btn_query.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(), PatientProfileActivity.class);
+                Intent i = new Intent(getActivity(), PatientSearchActivity.class);
                 startActivity(i);
                 ((Activity) requireActivity()).overridePendingTransition(0, 0);
 

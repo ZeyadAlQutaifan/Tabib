@@ -11,6 +11,7 @@ import com.example.tabib.R;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
+import doctor_screens.doctor_fragments.FragmentChats;
 import doctor_screens.doctor_fragments.FragmentQueryPatient;
 import doctor_screens.doctor_fragments.FragmentHome;
 
@@ -29,15 +30,19 @@ public class DoctorHomeActivity extends AppCompatActivity {
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-                if (tabId == R.id.tab_favorites) {
-                    FragmentQueryPatient fragment = new FragmentQueryPatient();
-                    fragmentTransaction.replace(R.id.container, fragment);
-                   // fragmentTransaction.addToBackStack(fragment.toString());
-                    fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
-                }else if (tabId == R.id.tab_recents){
+                if (tabId == R.id.tab_home) {
                     FragmentHome fragment = new FragmentHome();
+
                     fragmentTransaction.replace(R.id.container, fragment);
-                   // fragmentTransaction.addToBackStack(fragment.toString());
+                    fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+                }else if (tabId == R.id.tab_search){
+                    FragmentQueryPatient fragment = new FragmentQueryPatient();
+
+                    fragmentTransaction.replace(R.id.container, fragment);
+                    fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+                }else if (tabId == R.id.tab_chats){
+                    FragmentChats fragment = new FragmentChats();
+                    fragmentTransaction.replace(R.id.container, fragment);
                     fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
                 }
                 fragmentTransaction.commit();
@@ -45,16 +50,16 @@ public class DoctorHomeActivity extends AppCompatActivity {
         });
 
      }
-//    @Override
-//    public void onBackPressed() {
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//        FragmentTest2 fragment = new FragmentTest2();
-//
-//        fragmentTransaction.replace(R.id.container, fragment);
-//        // fragmentTransaction.addToBackStack(fragment.toString());
-//        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
-//        fragmentTransaction.commit();
-//        System.out.println("back");
-//    }
+    @Override
+    public void onBackPressed() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        FragmentHome fragment = new FragmentHome();
+
+        fragmentTransaction.replace(R.id.container, fragment);
+        // fragmentTransaction.addToBackStack(fragment.toString());
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+        fragmentTransaction.commit();
+        System.out.println("back");
+    }
 }
