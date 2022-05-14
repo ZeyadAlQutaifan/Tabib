@@ -29,8 +29,8 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        String[] languages = getResources().getStringArray(R.array.blood_array) ;
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.item_blood, languages);
+        String[] bloods = getResources().getStringArray(R.array.blood_array) ;
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.item_blood, bloods);
         AutoCompleteTextView autocompleteTV =(AutoCompleteTextView) findViewById(R.id.autoCompleteTextView);
         autocompleteTV.setAdapter(arrayAdapter);
 

@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="user_screens.AddRecordActivity">
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+
 
     <TextView
         android:id="@+id/textView23"
@@ -18,20 +24,34 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/img_record_image"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:onClick="pickImage"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView23"
-        app:srcCompat="@drawable/a_contact_doctor" />
+        app:srcCompat="@drawable/image_upload_bro" />
 
-    <LinearLayout
+     <TextView
+         android:id="@+id/textView25"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="8dp"
+         android:layout_marginBottom="8dp"
+         android:onClick="pickImage"
+         android:text="انقر لاضافة صورة"
+         app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+         app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+         app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+         app:layout_constraintTop_toBottomOf="@+id/img_record_image" />
+
+     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,28 +97,28 @@
             android:text="نوع السجل " />
     </LinearLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
+     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/textInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="8dp"
-        android:layout_weight="1"
-        android:hint="ملاحظات"
-        app:counterEnabled="true"
-        app:counterMaxLength="200"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+         android:id="@+id/textInputLayout"
+         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginVertical="8dp"
+         android:layout_weight="1"
+         android:hint="ملاحظات اضافية "
+         app:counterEnabled="true"
+         app:counterMaxLength="200"
+         app:layout_constraintBottom_toTopOf="@+id/button7"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etEnterCustomerAdditionalNotes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="4"
-            app:errorEnabled="true" />
-    </com.google.android.material.textfield.TextInputLayout>
+         <com.google.android.material.textfield.TextInputEditText
+             android:id="@+id/etEnterCustomerAdditionalNotes"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:maxLines="4"
+             app:errorEnabled="true" />
+     </com.google.android.material.textfield.TextInputLayout>
 
 
     <Button
@@ -111,5 +131,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+ </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
