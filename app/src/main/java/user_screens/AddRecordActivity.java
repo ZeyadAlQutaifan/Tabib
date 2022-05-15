@@ -41,20 +41,7 @@ ImageView img_record_image ;
 
     protected void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
         super.onActivityResult(requestCode, resultCode, imageReturnedIntent);
-        switch(requestCode) {
-            case 0:
-                if(resultCode == RESULT_OK){
-                    Uri selectedImage = imageReturnedIntent.getData();
-                    img_record_image.setImageURI(selectedImage);
-                }
-
-                break;
-            case 1:
-                if(resultCode == RESULT_OK){
-                    Uri selectedImage = imageReturnedIntent.getData();
-                    img_record_image.setImageURI(selectedImage);
-                }
-                break;
-        }
+       Uri imageUri = imageReturnedIntent.getData();
+       img_record_image.setImageURI(imageUri);
     }
 }

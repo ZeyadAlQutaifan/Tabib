@@ -23,20 +23,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/img_record_image"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:onClick="pickImage"
+        app:riv_corner_radius="10dp"
+        android:scaleType="centerCrop"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView23"
-        app:srcCompat="@drawable/image_upload_bro" />
+       android:src="@drawable/image_upload_bro" />
 
      <TextView
          android:id="@+id/textView25"
@@ -101,7 +103,7 @@
 
          android:id="@+id/textInputLayout"
          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-         android:layout_width="match_parent"
+         android:layout_width="0dp"
          android:layout_height="wrap_content"
          android:layout_marginVertical="8dp"
          android:layout_weight="1"
@@ -109,8 +111,8 @@
          app:counterEnabled="true"
          app:counterMaxLength="200"
          app:layout_constraintBottom_toTopOf="@+id/button7"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintStart_toStartOf="parent">
+         app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+         app:layout_constraintStart_toStartOf="@+id/linearLayout4">
 
          <com.google.android.material.textfield.TextInputEditText
              android:id="@+id/etEnterCustomerAdditionalNotes"
@@ -127,7 +129,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Button"
+        android:text="اضافة السجل"
+        android:paddingVertical="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
