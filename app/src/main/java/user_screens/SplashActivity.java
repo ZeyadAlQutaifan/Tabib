@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.tabib.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -20,6 +21,8 @@ public class SplashActivity extends AppCompatActivity {
 
 
     public void toLogin(View view) {
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        firebaseAuth.createUserWithEmailAndPassword("user123@fmail.com" , "ddddddddddd");
         Intent i = new Intent(SplashActivity.this , LoginActivity.class);
         startActivity(i);
     }

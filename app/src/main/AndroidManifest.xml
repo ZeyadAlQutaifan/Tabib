@@ -55,16 +55,16 @@
         <activity
             android:name="user_screens.SplashActivity"
             android:exported="true" >
-
-        </activity>
-        <activity
-            android:name="doctor_screens.DoctorHomeActivity"
-            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="doctor_screens.DoctorHomeActivity"
+            android:exported="true">
+
         </activity>
     </application>
 
