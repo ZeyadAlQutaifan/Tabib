@@ -112,10 +112,7 @@ private AutoCompleteTextView autocompleteTV1 ;
                 @Override
                 public void onDateSet(DatePicker arg0,
                                       int arg1, int arg2, int arg3) {
-                    // TODO Auto-generated method stub
-                    // arg1 = year
-                    // arg2 = month
-                    // arg3 = day
+
                     showDate(arg1, arg2+1, arg3);
                 }
             };
@@ -123,7 +120,7 @@ private AutoCompleteTextView autocompleteTV1 ;
     private void showDate(int year, int month, int day) {
         StringBuilder strDate = new StringBuilder().append(day).append("/")
                 .append(month).append("/").append(year);
-
+        strBirthDate = strDate.toString();
         System.out.println(strDate);
     }
 
@@ -141,13 +138,12 @@ private AutoCompleteTextView autocompleteTV1 ;
 
       if( !Validation.isEmpty(textViews ))
       {
-          if(Validation.isEmailMatchesPatter(etEmail )
-          && Validation.isSSnMatchesPatter(etSSN )
-          && Validation.isPhoneMatchesPattern(etPhone )
+          if(Validation.isEmailMatchesPatter(etEmail)
+                  && Validation.isSSnMatchesPatter(etSSN)
+                  && Validation.isPhoneMatchesPattern(etPhone)
           ) {
               if (Validation.isSelected(autocompleteTV, strGender, "يجب اختيار الجنس")
                       && Validation.isSelected(autocompleteTV, strBloodType, "يجب اختيار فصيلة الدم")
-
               ) {
 
                   Bundle bundle = new Bundle() ;

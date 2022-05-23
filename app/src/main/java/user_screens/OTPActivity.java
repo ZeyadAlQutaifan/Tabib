@@ -35,9 +35,12 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.concurrent.TimeUnit;
 
+import Modules.Patient;
+
 public class OTPActivity extends AppCompatActivity {
     TextView otp;
     EditText otp_box_1,otp_box_2,otp_box_3,otp_box_4,otp_box_5,otp_box_6;
+    Button btnVerify;
     private String strName;
     private String strPhoneNumber;
     private String strEmail;
@@ -47,6 +50,7 @@ public class OTPActivity extends AppCompatActivity {
     private String strBirthDate;
     private String strBloodType;
 
+    Patient patient;
     FirebaseAuth mAuth;
     PhoneAuthCredential phoneAuthCredential;
     PhoneAuthProvider.ForceResendingToken token;
@@ -56,8 +60,8 @@ public class OTPActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otpactivity);
-
-
+        mAuth = FirebaseAuth.getInstance();
+        btnVerify = findViewById(R.id.verify);
         otp = findViewById(R.id.otp);
         otp_box_1 = findViewById(R.id.otp_box_1);
         otp_box_2 = findViewById(R.id.otp_box_2);
@@ -66,7 +70,41 @@ public class OTPActivity extends AppCompatActivity {
         otp_box_5 = findViewById(R.id.otp_box_5);
         otp_box_6 = findViewById(R.id.otp_box_6);
         strPhoneNumber = getIntent().getExtras().getString("phone");
+        strEmail = getIntent().getExtras().getString("email");
+        strPassword = getIntent().getExtras().getString("password");
+        strSSN = getIntent().getExtras().getString("ssn");
+        strPhoneNumber = getIntent().getExtras().getString("phone");
+        strGender = getIntent().getExtras().getString("gender");
+        strBirthDate = getIntent().getExtras().getString("birthdate");
+        strBloodType = getIntent().getExtras().getString("bloodType");
+        strName = getIntent().getExtras().getString("name");
 
+
+        patient = new Patient();
+        patient.setName(strName);
+        patient.setEmail(strEmail);
+        patient.setSsn(strSSN);
+        patient.setPhone(strPhoneNumber);
+        patient.setGender(strGender);
+        patient.setBirth_date(strBirthDate);
+        patient.setBlood_type(strBloodType);
+
+        btnVerify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String OTP = otp_box_1.getText().toString()
+                        +  otp_box_2.getText().toString()
+                        +  otp_box_3.getText().toString()
+                        +  otp_box_4.getText().toString()
+                        +  otp_box_5.getText().toString()
+                        +  otp_box_6.getText().toString() ;
+
+
+                PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, OTP);
+                verifyAuthentication(credential);
+            }
+        });
         Toast.makeText(this, strPhoneNumber, Toast.LENGTH_SHORT).show();
 
 
@@ -196,7 +234,7 @@ public class OTPActivity extends AppCompatActivity {
         sendOTPCode("+962"+strPhoneNumber.substring(1));
 
     }
-    void signUpUserWithEmailAndPassword(String email, String password) {
+   /* void signUpUserWithEmailAndPassword(String email, String password) {
         mAuth = FirebaseAuth.getInstance();
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -214,7 +252,7 @@ public class OTPActivity extends AppCompatActivity {
             }
         });
 
-    }
+    }*/
     private void sendOTPCode(String phoneNumber) {
 
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
@@ -240,6 +278,7 @@ public class OTPActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         Toast.makeText(OTPActivity.this, "تم التأكيد بنجاح", Toast.LENGTH_LONG).show();
+                        addUserToFirestore(mAuth.getUid());
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -297,6 +336,16 @@ public class OTPActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
 
+            }
+        });
+    }
+    private void addUserToFirestore(String uid){
+       DocumentReference mFirestore = FirebaseFirestore.getInstance().collection("Users").document(uid);
+        mFirestore.set(patient).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                startActivity(new Intent(OTPActivity.this , HomeActivity.class));
+                finish();
             }
         });
     }
