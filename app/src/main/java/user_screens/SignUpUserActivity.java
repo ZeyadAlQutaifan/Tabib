@@ -2,6 +2,7 @@ package user_screens;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,6 +18,7 @@ import com.example.tabib.R;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.Calendar;
+import java.util.Objects;
 
 import validation.Validation;
 
@@ -63,7 +65,7 @@ private AutoCompleteTextView autocompleteTV1 ;
         autocompleteTV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String [] arr = getResources().getStringArray(R.array.blood_array);
+                String[] arr = getResources().getStringArray(R.array.blood_array);
                 strBloodType = arr[i];
             }
         });
@@ -73,6 +75,13 @@ private AutoCompleteTextView autocompleteTV1 ;
         ArrayAdapter<String> arrayAdapter1 = new ArrayAdapter<>(this, R.layout.item_blood, genders);
         autocompleteTV1 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView1);
         autocompleteTV1.setAdapter(arrayAdapter1);
+        autocompleteTV1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String[] arr = getResources().getStringArray(R.array.blood_array);
+                strGender = arr[i];
+            }
+        });
 
         calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
@@ -135,13 +144,33 @@ private AutoCompleteTextView autocompleteTV1 ;
         };
 
 
-      if( !Validation.isEmpty(textViews , "لا يمكن ان يكون فارغاً"))
+      if( !Validation.isEmpty(textViews ))
       {
-          if(Validation.isEmailMatchesPatter(etEmail , "يرجى كتابة الايميل بطريقة صحيحة")
-          && Validation.isSSnMatchesPatter(etSSN , "يرجة كتابة الرقم الوطني بطريقة صحيحة")
-          && Validation.isPhoneMatchesPattern(etPhone , "يرجى كتابة رقم الهاتف بالطريقة الصحيحة")
-          ){
-              System.out.println("success!");
+          if(Validation.isEmailMatchesPatter(etEmail )
+          && Validation.isSSnMatchesPatter(etSSN )
+          && Validation.isPhoneMatchesPattern(etPhone )
+          ) {
+              if (Validation.isSelected(autocompleteTV, strGender, "يجب اختيار الجنس")
+                      && Validation.isSelected(autocompleteTV, strBloodType, "يجب اختيار فصيلة الدم")
+
+              ) {
+
+                  Bundle bundle = new Bundle() ;
+                  bundle.putString("name" , Objects.requireNonNull(etName.getText()).toString() );
+                  bundle.putString("email" , Objects.requireNonNull(etEmail.getText()).toString());
+                  bundle.putString("password" , Objects.requireNonNull(etPassword.getText()).toString());
+                  bundle.putString("gender" , strGender);
+                  bundle.putString("birthdate" , strBirthDate);
+                  bundle.putString("phone" , Objects.requireNonNull(etPhone.getText()).toString());
+                  bundle.putString("ssn" , Objects.requireNonNull(etSSN.getText()).toString());
+                  bundle.putString("bloodType" , strBloodType);
+                  Intent intent = new Intent(SignUpUserActivity.this , OTPActivity.class);
+                  intent.putExtras(bundle);
+                  startActivity(intent);
+
+
+              }
+
           }
 
       }
