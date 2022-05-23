@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void toSignUp(View view) {
-        startActivity(new Intent(LoginActivity.this , SignUpActivity.class));
+        startActivity(new Intent(LoginActivity.this , SignUpUserActivity.class));
     }
 
     public void toHome(View view) {
@@ -31,5 +31,9 @@ public class LoginActivity extends AppCompatActivity {
 
     public void toResetPassword(View view) {
        startActivity(new Intent(LoginActivity.this , ResetPasswordActivity.class));
+    }
+
+    public void toChooseType(View view) {
+        startActivity(new Intent(LoginActivity.this , ChooseTypeActivity.class));
     }
 }

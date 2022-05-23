@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tabib">
+    package="com.example.tabib" >
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -10,13 +11,19 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Tabib">
+        android:theme="@style/Theme.Tabib" >
+        <activity
+            android:name="doctor_screens.SignUpDoctorActivity"
+            android:exported="false" />
+        <activity
+            android:name="user_screens.ChooseTypeActivity"
+            android:exported="false" />
         <activity
             android:name="user_screens.AddRecordActivity"
             android:exported="false" />
         <activity
             android:name="doctor_screens.PatientSearchActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name="user_screens.DoctorsActivity"
             android:exported="false" />
@@ -47,7 +54,7 @@
             android:value="true" />
 
         <activity
-            android:name="user_screens.SignUpActivity"
+            android:name="user_screens.SignUpUserActivity"
             android:exported="false" />
         <activity
             android:name="user_screens.LoginActivity"
@@ -63,9 +70,7 @@
         </activity>
         <activity
             android:name="doctor_screens.DoctorHomeActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -112,7 +112,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:background="@drawable/blue_button_background"
-        android:onClick="toSignUp"
+        android:onClick="toChooseType"
         android:text="انشاء حساب"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
