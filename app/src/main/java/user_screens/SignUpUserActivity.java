@@ -38,11 +38,6 @@ private AutoCompleteTextView autocompleteTV ;
 private AutoCompleteTextView autocompleteTV1 ;
 
 
-    private String strName;
-    private String strPhoneNumber;
-    private String strEmail;
-    private String strPassword;
-    private String strSSN;
     private String strGender;
     private String strBirthDate;
     private String strBloodType;
