@@ -12,7 +12,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:text="إنشاء الحساب "
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -196,11 +196,11 @@
                     />
 
                 <com.makeramen.roundedimageview.RoundedImageView
-                    android:id="@+id/img_record_image"
+                    android:id="@+id/img_license_image"
                     android:layout_width="match_parent"
                     android:layout_height="400dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginVertical="16dp"
                     android:onClick="pickImage"
                     app:riv_corner_radius="10dp"
                     android:scaleType="centerCrop"
@@ -213,7 +213,9 @@
 
 
 
-
+<View
+    android:layout_width="match_parent"
+    android:layout_height="50dp"/>
 
 
 

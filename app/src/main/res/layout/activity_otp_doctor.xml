@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="user_screens.OTPActivity">
-
+    tools:context="doctor_screens.DoctorOTPActivity">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -30,7 +29,7 @@
                     android:layout_height="210dp"
                     android:layout_gravity="center"
                     android:src="@drawable/a_medical_prescription_pana"
-                   />
+                    />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -226,7 +225,7 @@
                     android:background="@drawable/blue_button_background"
                     android:paddingVertical="10dp"
                     android:text="تأكيد وانشاء الحساب"
-                    android:onClick="register_user_click"
+                    android:onClick="register_doctor_click"
                     android:textAllCaps="false"
                     android:textColor="#ffffff"
                     android:textSize="16sp" />

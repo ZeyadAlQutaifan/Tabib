@@ -155,7 +155,7 @@ private AutoCompleteTextView autocompleteTV1 ;
                   bundle.putString("phone" , Objects.requireNonNull(etPhone.getText()).toString());
                   bundle.putString("ssn" , Objects.requireNonNull(etSSN.getText()).toString());
                   bundle.putString("bloodType" , strBloodType);
-                  Intent intent = new Intent(SignUpUserActivity.this , OTPActivity.class);
+                  Intent intent = new Intent(SignUpUserActivity.this , UserOTPActivity.class);
                   intent.putExtras(bundle);
                   startActivity(intent);
 

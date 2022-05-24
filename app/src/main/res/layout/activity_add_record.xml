@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/img_record_image"
+        android:id="@+id/img_license_image"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_marginStart="16dp"
@@ -51,7 +51,7 @@
          app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
          app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
          app:layout_constraintStart_toStartOf="@+id/linearLayout4"
-         app:layout_constraintTop_toBottomOf="@+id/img_record_image" />
+         app:layout_constraintTop_toBottomOf="@+id/img_license_image" />
 
      <LinearLayout
         android:id="@+id/linearLayout4"

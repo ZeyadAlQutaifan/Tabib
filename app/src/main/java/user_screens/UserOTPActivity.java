@@ -3,8 +3,6 @@ package user_screens;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -37,7 +35,7 @@ import java.util.concurrent.TimeUnit;
 
 import Modules.Patient;
 
-public class OTPActivity extends AppCompatActivity {
+public class UserOTPActivity extends AppCompatActivity {
     TextView otp;
     EditText otp_box_1,otp_box_2,otp_box_3,otp_box_4,otp_box_5,otp_box_6;
     Button btnVerify;
@@ -59,7 +57,7 @@ public class OTPActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_otpactivity);
+        setContentView(R.layout.activity_otp_user);
         mAuth = FirebaseAuth.getInstance();
         btnVerify = findViewById(R.id.verify);
         otp = findViewById(R.id.otp);
@@ -101,8 +99,13 @@ public class OTPActivity extends AppCompatActivity {
                         +  otp_box_6.getText().toString() ;
 
 
-                PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, OTP);
-                verifyAuthentication(credential);
+                try{
+                    PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, OTP);
+                    verifyAuthentication(credential);
+                }catch (Exception e){
+
+                }
+
             }
         });
         Toast.makeText(this, strPhoneNumber, Toast.LENGTH_SHORT).show();
@@ -227,7 +230,7 @@ public class OTPActivity extends AppCompatActivity {
             @Override
             public void onVerificationFailed(@NonNull FirebaseException e) {
                 Log.v("test112", e.getMessage());
-                Toast.makeText(OTPActivity.this, "فشل في العملية", Toast.LENGTH_LONG).show();
+                Toast.makeText(UserOTPActivity.this, "فشل في العملية", Toast.LENGTH_LONG).show();
             }
         };
 
@@ -259,13 +262,13 @@ public class OTPActivity extends AppCompatActivity {
                 phoneNumber,
                 60,
                 TimeUnit.SECONDS,
-                OTPActivity.this,
+                UserOTPActivity.this,
                 mCallbacks
         );
     }
 
     public void register_user_click(View view) {
-        startActivity(new Intent(OTPActivity.this , HomeActivity.class));
+        startActivity(new Intent(UserOTPActivity.this , HomeActivity.class));
     }
 
     private void verifyAuthentication(PhoneAuthCredential credential) {
@@ -277,14 +280,14 @@ public class OTPActivity extends AppCompatActivity {
                 mAuth.getCurrentUser().linkWithCredential(credential).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {
-                        Toast.makeText(OTPActivity.this, "تم التأكيد بنجاح", Toast.LENGTH_LONG).show();
+                        Toast.makeText(UserOTPActivity.this, "تم التأكيد بنجاح", Toast.LENGTH_LONG).show();
                         addUserToFirestore(mAuth.getUid());
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         deleted(strEmail , strPassword);
-                        Button button = new Button(OTPActivity.this);
+                        Button button = new Button(UserOTPActivity.this);
                         button.setText("حسناً");
                         button.setOnClickListener(v -> {
                             finish();
@@ -344,7 +347,7 @@ public class OTPActivity extends AppCompatActivity {
         mFirestore.set(patient).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                startActivity(new Intent(OTPActivity.this , HomeActivity.class));
+                startActivity(new Intent(UserOTPActivity.this , HomeActivity.class));
                 finish();
             }
         });

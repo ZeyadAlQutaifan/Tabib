@@ -11,6 +11,7 @@
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_add_record.xml" value="0.3569230769230769" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_choose_type.xml" value="0.3625" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_doctor_home.xml" value="0.3625" />
+        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_doctor_otp.xml" value="0.3625" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_doctors.xml" value="0.33" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_factivity.xml" value="0.2860196665241556" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_home.xml" value="0.33" />
@@ -20,11 +21,12 @@
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_medical_advices.xml" value="0.25" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_medical_drugs.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_medical_records.xml" value="0.25" />
+        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_otp_user.xml" value="0.3625" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_otpactivity.xml" value="0.25" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_patient_profile.xml" value="0.33" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_reset_password.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
-        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_sign_up_doctor.xml" value="0.3625" />
+        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_sign_up_doctor.xml" value="0.264" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_sign_up_user.xml" value="0.3625" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_splash.xml" value="0.5" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_test.xml" value="0.358695652173913" />
