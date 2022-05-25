@@ -142,7 +142,7 @@ private AutoCompleteTextView autocompleteTV1 ;
                   && Validation.isSSnMatchesPatter(etSSN)
                   && Validation.isPhoneMatchesPattern(etPhone)
           ) {
-              if (Validation.isSelected(autocompleteTV, strGender, "يجب اختيار الجنس")
+              if (Validation.isSelected(autocompleteTV1, strGender, "يجب اختيار الجنس")
                       && Validation.isSelected(autocompleteTV, strBloodType, "يجب اختيار فصيلة الدم")
               ) {
 

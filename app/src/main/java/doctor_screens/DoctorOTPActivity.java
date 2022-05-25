@@ -76,8 +76,7 @@ public class DoctorOTPActivity extends AppCompatActivity {
         strSSN = getIntent().getExtras().getString("ssn");
         strPhoneNumber = getIntent().getExtras().getString("phone");
         strGender = getIntent().getExtras().getString("gender");
-        strBirthDate = getIntent().getExtras().getString("birthdate");
-        strBloodType = getIntent().getExtras().getString("bloodType");
+
         strName = getIntent().getExtras().getString("name");
 
 
