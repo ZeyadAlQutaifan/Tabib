@@ -103,7 +103,7 @@ public class UserOTPActivity extends AppCompatActivity {
                     PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, OTP);
                     verifyAuthentication(credential);
                 }catch (Exception e){
-
+                    Toast.makeText(UserOTPActivity.this, "يرجة كتابة رمز التأكيد", Toast.LENGTH_LONG).show();
                 }
 
             }
