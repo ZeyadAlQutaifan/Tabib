@@ -252,9 +252,6 @@ public class DoctorOTPActivity extends AppCompatActivity {
         );
     }
 
-    public void register_user_click(View view) {
-        startActivity(new Intent(DoctorOTPActivity.this , HomeActivity.class));
-    }
 
     private void verifyAuthentication(PhoneAuthCredential credential) {
 

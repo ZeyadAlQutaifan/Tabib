@@ -267,9 +267,6 @@ public class UserOTPActivity extends AppCompatActivity {
         );
     }
 
-    public void register_user_click(View view) {
-        startActivity(new Intent(UserOTPActivity.this , HomeActivity.class));
-    }
 
     private void verifyAuthentication(PhoneAuthCredential credential) {
 
