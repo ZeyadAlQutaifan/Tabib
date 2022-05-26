@@ -33,9 +33,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.concurrent.TimeUnit;
 
+import Modules.Doctor;
 import Modules.Patient;
-import user_screens.HomeActivity;
-import user_screens.UserOTPActivity;
 
 public class DoctorOTPActivity extends AppCompatActivity {
     TextView otp;
@@ -47,10 +46,10 @@ public class DoctorOTPActivity extends AppCompatActivity {
     private String strPassword;
     private String strSSN;
     private String strGender;
-    private String strBirthDate;
-    private String strBloodType;
+   private String strSpecialization;
+   private String strImageUri ;
 
-    Patient patient;
+    Doctor doctor;
     FirebaseAuth mAuth;
     PhoneAuthCredential phoneAuthCredential;
     PhoneAuthProvider.ForceResendingToken token;
@@ -76,18 +75,17 @@ public class DoctorOTPActivity extends AppCompatActivity {
         strSSN = getIntent().getExtras().getString("ssn");
         strPhoneNumber = getIntent().getExtras().getString("phone");
         strGender = getIntent().getExtras().getString("gender");
-
         strName = getIntent().getExtras().getString("name");
-
-
-        patient = new Patient();
-        patient.setName(strName);
-        patient.setEmail(strEmail);
-        patient.setSsn(strSSN);
-        patient.setPhone(strPhoneNumber);
-        patient.setGender(strGender);
-        patient.setBirth_date(strBirthDate);
-        patient.setBlood_type(strBloodType);
+        strSpecialization = getIntent().getExtras().getString("specialization");
+        strImageUri = getIntent().getExtras().getString("uri");
+        doctor = new Doctor();
+        doctor.setName(strName);
+        doctor.setEmail(strEmail);
+        doctor.setSsn(strSSN);
+        doctor.setPhone(strPhoneNumber);
+        doctor.setGender(strGender);
+        doctor.setSpecialization(strSpecialization);
+        doctor.setLicense_image(strImageUri);
 
         btnVerify.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -324,8 +322,8 @@ public class DoctorOTPActivity extends AppCompatActivity {
         });
     }
     private void addUserToFirestore(String uid){
-        DocumentReference mFirestore = FirebaseFirestore.getInstance().collection("Users").document(uid);
-        mFirestore.set(patient).addOnCompleteListener(new OnCompleteListener<Void>() {
+        DocumentReference mFirestore = FirebaseFirestore.getInstance().collection("Doctors").document(uid);
+        mFirestore.set(doctor).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 startActivity(new Intent(DoctorOTPActivity.this , DoctorHomeActivity.class));

@@ -1,19 +1,28 @@
 package Modules;
 
 public class Patient {
-    private String name , phone , email , ssn , gender , birth_date , blood_type ;
+    private String name , phone , email , ssn , gender , birth_date ,city ,  blood_type ;
 
     public Patient() {
     }
 
-    public Patient(String name, String phone, String email, String ssn, String gender, String birth_date, String blood_type) {
+    public Patient(String name, String phone, String email, String ssn, String gender, String birth_date, String city, String blood_type) {
         this.name = name;
         this.phone = phone;
         this.email = email;
         this.ssn = ssn;
         this.gender = gender;
         this.birth_date = birth_date;
+        this.city = city;
         this.blood_type = blood_type;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public String getName() {

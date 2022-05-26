@@ -18,6 +18,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.Objects;
 
+import Modules.Doctor;
 import user_screens.SignUpUserActivity;
 import user_screens.UserOTPActivity;
 import validation.Validation;
@@ -112,7 +113,8 @@ public class SignUpDoctorActivity extends AppCompatActivity {
                     bundle.putString("phone" , Objects.requireNonNull(etPhone.getText()).toString());
                     bundle.putString("ssn" , Objects.requireNonNull(etSSN.getText()).toString());
                     bundle.putString("city" , strCity);
-                    Intent intent = new Intent(SignUpDoctorActivity.this , UserOTPActivity.class);
+                    bundle.putString("uri" , imageUri.toString());
+                    Intent intent = new Intent(SignUpDoctorActivity.this , DoctorOTPActivity.class);
                     intent.putExtras(bundle);
                     startActivity(intent);
 
