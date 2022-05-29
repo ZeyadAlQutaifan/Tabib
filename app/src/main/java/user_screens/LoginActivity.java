@@ -13,14 +13,17 @@ import android.widget.TextView;
 
 import com.example.tabib.R;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Locale;
 
+import doctor_screens.DoctorHomeActivity;
 import validation.Validation;
 
 public class LoginActivity extends AppCompatActivity {
@@ -55,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
                 etEmail ,
                 etPassword
         } ;
-        if(Validation.isEmpty(textViews )){
+        if(!Validation.isEmpty(textViews ) && Validation.isEmailMatchesPatter(etEmail)){
             strEmail = etEmail.getText().toString().trim();
             strPassword = etPassword.getText().toString().trim();
             mAuth.signInWithEmailAndPassword(strEmail , strPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -79,10 +82,43 @@ public class LoginActivity extends AppCompatActivity {
 
 
     void checkType(String id){
-        if (mFirestore.collection("Users").document(id) != null){
+        FirebaseFirestore userRootRef = FirebaseFirestore.getInstance();
+        DocumentReference studentDocIdRef = userRootRef.collection("Users").document(id);
+        studentDocIdRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
 
-        }else{
 
-        }
+                if (documentSnapshot.exists()) {
+
+
+                    userLogin();
+
+
+                }
+
+            }
+        });
+
+        FirebaseFirestore doctorRootRef = FirebaseFirestore.getInstance();
+        DocumentReference brokerDocIdRef = doctorRootRef.collection("Doctors").document(id);
+        brokerDocIdRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if (documentSnapshot.exists()) {
+
+                    doctorLogin();
+                }
+
+            }
+        });
     }
+
+    void userLogin(){
+        startActivity(new Intent(getApplication() , HomeActivity.class));
+    }
+    void doctorLogin(){
+        startActivity(new Intent(getApplication(), DoctorHomeActivity.class));
+    }
+
 }
