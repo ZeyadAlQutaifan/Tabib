@@ -9,11 +9,15 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tabib.R;
 import com.github.dhaval2404.imagepicker.ImagePicker;
+import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -76,6 +80,28 @@ public class AddRecordActivity extends AppCompatActivity {
     }
 
     void uploadImageToFirestorage() {
+        String userId = mAuth.getCurrentUser().getUid();
+        String userEmail = mAuth.getCurrentUser().getEmail();
+
+        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("Records").child(userEmail).child(strImageUri);
+        storageReference.putFile(Uri.parse(strImageUri.toString()))
+                .continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
+                    @Override
+                    public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
+                        if (!task.isSuccessful()) {
+                            throw task.getException();
+                        }
+                        return storageReference.getDownloadUrl();
+                    }
+                }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+            @Override
+            public void onComplete(@NonNull Task<Uri> task) {
+                Uri uri = task.getResult();
+                record.setImageUri(uri.toString());
+                uploadRecordToFirestore();
+            }
+        });
+
 
     }
 
@@ -87,6 +113,16 @@ public class AddRecordActivity extends AppCompatActivity {
         record = new Record();
         record.setAdditional_notes(strAdditionalNotes);
         record.setType(strRecordType);
+        firebaseFirestore.set(record).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                finish();
+            }
+        });
 
+    }
+
+    public void addRecord(View view) {
+        uploadImageToFirestorage();
     }
 }
