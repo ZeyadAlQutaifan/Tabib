@@ -76,9 +76,11 @@ public class AddRecordActivity extends AppCompatActivity {
 
     protected void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
         super.onActivityResult(requestCode, resultCode, imageReturnedIntent);
-        Uri imageUri = imageReturnedIntent.getData();
-        img_record_image.setImageURI(imageUri);
-        strImageUri = imageUri.toString();
+        if(requestCode == 2404) {
+            Uri imageUri = imageReturnedIntent.getData();
+            img_record_image.setImageURI(imageUri);
+            strImageUri = imageUri.toString();
+        }
     }
 
     void uploadImageToFirestorage() {
