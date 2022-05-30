@@ -1,9 +1,20 @@
 package Modules;
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class Record {
     private String imageUri  , type , date, additional_notes;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Record() {
+        LocalDate dateObj = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        date= dateObj.format(formatter);
     }
 
     public Record(String imageUri, String type, String date, String additional_notes) {

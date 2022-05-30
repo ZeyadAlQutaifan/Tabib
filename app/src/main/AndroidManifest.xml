@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tabib">
         <activity
+            android:name="user_screens.AddMedicActivity"
+            android:exported="false" />
+        <activity
+            android:name="user_screens.AddDiseaseActivity"
+            android:exported="false" />
+        <activity
             android:name="doctor_screens.SignUpDoctorActivity"
             android:exported="false" />
         <activity
@@ -31,7 +37,7 @@
             android:name="user_screens.MedicalAdvicesActivity"
             android:exported="false" />
         <activity
-            android:name="user_screens.IllnessesActivity"
+            android:name="user_screens.DiseasesActivity"
             android:exported="false" />
         <activity
             android:name="user_screens.ResetPasswordActivity"
@@ -47,7 +53,13 @@
             android:exported="true" />
         <activity
             android:name="user_screens.HomeActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
@@ -61,13 +73,7 @@
             android:exported="true" />
         <activity
             android:name="user_screens.SplashActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name="doctor_screens.DoctorHomeActivity"
             android:exported="true" />

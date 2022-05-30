@@ -2,22 +2,25 @@ package user_screens;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tabib.R;
 import com.github.dhaval2404.imagepicker.ImagePicker;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -25,14 +28,12 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-
 import Modules.Record;
+import validation.Validation;
 
 public class AddRecordActivity extends AppCompatActivity {
     ImageView img_record_image;
+    TextInputEditText etAdditionalNotes ;
     private String strRecordType;
     private String strAdditionalNotes;
     private String strImageUri;
@@ -45,7 +46,7 @@ public class AddRecordActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_record);
-
+        etAdditionalNotes = findViewById(R.id.etDiseaseName);
 
         mAuth = FirebaseAuth.getInstance();
         String[] records_types_array = getResources().getStringArray(R.array.records_types_array);
@@ -55,7 +56,8 @@ public class AddRecordActivity extends AppCompatActivity {
         autocompleteTV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+                String[] types = getResources().getStringArray(R.array.records_types_array);
+                strRecordType = types[i];
             }
         });
 
@@ -94,6 +96,7 @@ public class AddRecordActivity extends AppCompatActivity {
                         return storageReference.getDownloadUrl();
                     }
                 }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onComplete(@NonNull Task<Uri> task) {
                 Uri uri = task.getResult();
@@ -105,6 +108,7 @@ public class AddRecordActivity extends AppCompatActivity {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     void uploadRecordToFirestore() {
         DocumentReference firebaseFirestore = FirebaseFirestore.getInstance()
                 .collection("Users")
@@ -123,6 +127,10 @@ public class AddRecordActivity extends AppCompatActivity {
     }
 
     public void addRecord(View view) {
-        uploadImageToFirestorage();
+        TextView [] textViews = {etAdditionalNotes};
+        if(!Validation.isEmpty(textViews) && !strImageUri.isEmpty() && !strRecordType.isEmpty()){
+            uploadImageToFirestorage();
+        }
+
     }
 }
