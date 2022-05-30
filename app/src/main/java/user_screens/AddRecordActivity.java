@@ -37,9 +37,9 @@ public class AddRecordActivity extends AppCompatActivity {
     private String strAdditionalNotes;
     private String strImageUri;
     private Record record;
-
     StorageReference mStorage;
     FirebaseAuth mAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
