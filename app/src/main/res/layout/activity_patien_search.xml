@@ -52,7 +52,7 @@
                     android:weightSum="2">
 
                     <TextView
-                        android:id="@+id/textView28"
+                        android:id="@+id/txt_patient_name"
                         android:layout_width="0dp"
 
                         android:layout_height="wrap_content"
@@ -85,6 +85,7 @@
 
                     <TextView
 
+                        android:id="@+id/txt_patient_age"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -114,6 +115,7 @@
 
                     <TextView
 
+                        android:id="@+id/txt_blood_type"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -144,6 +146,7 @@
 
                     <TextView
 
+                        android:id="@+id/txt_patient_gender"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"

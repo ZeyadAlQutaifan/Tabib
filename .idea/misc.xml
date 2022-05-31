@@ -26,8 +26,10 @@
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_medical_records.xml" value="0.25" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_otp_user.xml" value="0.3625" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_otpactivity.xml" value="0.25" />
+        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_patien_search.xml" value="0.25" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_patient_profile.xml" value="0.33" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_reset_password.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_show_record.xml" value="0.25" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_sign_up_doctor.xml" value="0.264" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/activity_sign_up_user.xml" value="0.3625" />
@@ -42,7 +44,10 @@
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/fragment_test2.xml" value="0.3484375" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/item_blod.xml" value="0.3625" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/item_blood.xml" value="0.3569230769230769" />
+        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/item_diseases.xml" value="0.25" />
+        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/item_medic.xml" value="0.25" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/item_rate.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/layout/item_record.xml" value="0.4" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/menu/bottom_nav_bar_content.xml" value="0.3625" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2195" />
         <entry key="..\:/Users/ZeyadKH/AndroidStudioProjects/Tabib/app/src/main/res/xml/bottombar_tabs_color_changing.xml" value="0.3625" />

@@ -31,7 +31,7 @@ public class AddDiseaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_disease);
-        etDiseaseName = findViewById(R.id.etDiseaseName);
+        etDiseaseName = findViewById(R.id.etMedicName);
 
     mAuth = FirebaseAuth.getInstance();
 

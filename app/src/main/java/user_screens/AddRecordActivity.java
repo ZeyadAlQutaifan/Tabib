@@ -42,12 +42,13 @@ public class AddRecordActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
 
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_record);
-        etAdditionalNotes = findViewById(R.id.etDiseaseName);
-
+        etAdditionalNotes = findViewById(R.id.etMedicName);
+        record = new Record();
         mAuth = FirebaseAuth.getInstance();
         String[] records_types_array = getResources().getStringArray(R.array.records_types_array);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.item_blood, records_types_array);
@@ -93,7 +94,7 @@ public class AddRecordActivity extends AppCompatActivity {
                     @Override
                     public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
                         if (!task.isSuccessful()) {
-                            throw task.getException();
+                          //  throw task.getException();
                         }
                         return storageReference.getDownloadUrl();
                     }
@@ -116,7 +117,7 @@ public class AddRecordActivity extends AppCompatActivity {
                 .collection("Users")
                 .document(mAuth.getUid())
                 .collection("Records").document();
-        record = new Record();
+
         record.setAdditional_notes(strAdditionalNotes);
         record.setType(strRecordType);
         firebaseFirestore.set(record).addOnCompleteListener(new OnCompleteListener<Void>() {

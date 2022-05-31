@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tabib">
         <activity
+            android:name="user_screens.ShowRecordActivity"
+            android:exported="false" />
+        <activity
             android:name="user_screens.AddMedicActivity"
             android:exported="false" />
         <activity
@@ -27,9 +30,14 @@
         <activity
             android:name="user_screens.AddRecordActivity"
             android:exported="false" />
+
         <activity
             android:name="doctor_screens.PatientSearchActivity"
             android:exported="true" />
+        <activity
+            android:name="doctor_screens.DoctorOTPActivity"
+            android:exported="true" />
+
         <activity
             android:name="user_screens.DoctorsActivity"
             android:exported="false" />
@@ -54,11 +62,7 @@
         <activity
             android:name="user_screens.HomeActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data
@@ -73,7 +77,13 @@
             android:exported="true" />
         <activity
             android:name="user_screens.SplashActivity"
-            android:exported="true"></activity>
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="doctor_screens.DoctorHomeActivity"
             android:exported="true" />

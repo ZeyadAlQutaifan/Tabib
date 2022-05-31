@@ -1,9 +1,12 @@
 package doctor_screens;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.Html;
@@ -16,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.tabib.R;
+import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -30,6 +34,9 @@ import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import java.util.concurrent.TimeUnit;
 
@@ -260,7 +267,8 @@ public class DoctorOTPActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         Toast.makeText(DoctorOTPActivity.this, "تم التأكيد بنجاح", Toast.LENGTH_LONG).show();
-                        addUserToFirestore(mAuth.getUid());
+                        addUserToFirestorage(mAuth.getUid());
+
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -278,6 +286,31 @@ public class DoctorOTPActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+    private void addUserToFirestorage(String uid) {
+        String userId = mAuth.getCurrentUser().getUid();
+        String userEmail = mAuth.getCurrentUser().getEmail();
+
+        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("License").child(userEmail).child(strImageUri);
+        storageReference.putFile(Uri.parse(strImageUri.toString()))
+                .continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
+                    @Override
+                    public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
+                        if (!task.isSuccessful()) {
+                            //throw task.getException();
+                        }
+                        return storageReference.getDownloadUrl();
+                    }
+                }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
+            @Override
+            public void onComplete(@NonNull Task<Uri> task) {
+                Uri uri = task.getResult();
+                doctor.setLicense_image(uri.toString());
+                addUserToFirestore(userId);
+            }
+        });
 
     }
 

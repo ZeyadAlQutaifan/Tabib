@@ -19,4 +19,22 @@ public class MedicalRecordsActivity extends AppCompatActivity {
     public void toAddRecord(View view) {
         startActivity(new Intent(MedicalRecordsActivity.this , AddRecordActivity.class));
     }
+
+    public void toShowRecords1(View view) {
+        Intent intent = new Intent(getApplication() , ShowRecordActivity.class);
+        intent.putExtra("type" , "تقرير طبي");
+        startActivity(intent);
+    }
+
+    public void toShowRecords2(View view) {
+        Intent intent = new Intent(getApplication() , ShowRecordActivity.class);
+        intent.putExtra("type" , "صورة اشعة");
+        startActivity(intent);
+    }
+
+    public void toShowRecords3(View view) {
+        Intent intent = new Intent(getApplication() , ShowRecordActivity.class);
+        intent.putExtra("type" , "نتيجة فحص");
+        startActivity(intent);
+    }
 }

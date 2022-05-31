@@ -2,14 +2,14 @@ package Modules;
 
 public class Medic {
     private String name ;
-    private String pills_per_day;
+    private String medic_uses_count;
 
     public Medic() {
     }
 
-    public Medic(String name, String pills_per_day) {
+    public Medic(String name, String medic_uses_count) {
         this.name = name;
-        this.pills_per_day = pills_per_day;
+        this.medic_uses_count = medic_uses_count;
     }
 
     public String getName() {
@@ -20,11 +20,11 @@ public class Medic {
         this.name = name;
     }
 
-    public String getPills_per_day() {
-        return pills_per_day;
+    public String getMedic_uses_count() {
+        return medic_uses_count;
     }
 
-    public void setPills_per_day(String pills_per_day) {
-        this.pills_per_day = pills_per_day;
+    public void setMedic_uses_count(String medic_uses_count) {
+        this.medic_uses_count = medic_uses_count;
     }
 }

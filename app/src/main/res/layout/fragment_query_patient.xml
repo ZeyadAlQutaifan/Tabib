@@ -14,7 +14,7 @@
         android:layout_marginTop="32dp"
         android:text="الاستعلام عن مريض "
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etPatientSSN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,16 +22,16 @@
 
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etPatientSSN"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="ادخل الرقم الوطني للمريض
-"
-        android:inputType="textPersonName"
+        android:hint="ادخل الرقم الوطني للمريض"
+
+        android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/switch1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,8 +48,8 @@
         android:minHeight="48dp"
         android:text="الاستعلام بواسطة الاسم "
         app:layout_constraintBottom_toTopOf="@+id/btn_query"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintEnd_toEndOf="@+id/etPatientSSN"
+        app:layout_constraintTop_toBottomOf="@+id/etPatientSSN" />
 
     <Button
         android:id="@+id/btn_query"

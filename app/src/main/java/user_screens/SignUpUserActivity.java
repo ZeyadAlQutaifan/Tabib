@@ -73,7 +73,7 @@ private AutoCompleteTextView autocompleteTV1 ;
         autocompleteTV1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String[] arr = getResources().getStringArray(R.array.blood_array);
+                String[] arr = getResources().getStringArray(R.array.genders);
                 strGender = arr[i];
             }
         });
