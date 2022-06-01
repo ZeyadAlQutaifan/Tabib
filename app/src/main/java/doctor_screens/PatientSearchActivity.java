@@ -52,5 +52,6 @@ public class PatientSearchActivity extends AppCompatActivity {
     }
 
     private void calculateAge(String birth_date) {
+
     }
 }
