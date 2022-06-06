@@ -29,54 +29,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView36">
 
-        <com.google.android.material.textfield.TextInputLayout
 
-            android:id="@+id/textInputLayout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="8dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="32dp"
-            android:layout_weight="1"
-            android:hint="اسم الدواء "
-            app:counterEnabled="true"
-            app:counterMaxLength="200"
-            app:layout_constraintEnd_toEndOf="@+id/textView36"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView36">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etMedicName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="4"
-                app:errorEnabled="true" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-
-            android:id="@+id/textInputLayout1"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:text="اسم الدواء"/>
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="8dp"
-            android:layout_marginStart="16dp"
-            android:layout_weight="1"
-            android:hint="عدد مرات الاستخدام"
-            app:counterEnabled="true"
-            app:counterMaxLength="200"
-            app:layout_constraintEnd_toEndOf="@+id/textView36"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/et_background"
+            android:id="@+id/etMedicName"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etMedicUses"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="4"
-                app:errorEnabled="true" />
-        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="عدد مرات الاستخدام"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/et_background"
+            android:id="@+id/etMedicUses"/>
 
         <TextView
             android:layout_width="match_parent"

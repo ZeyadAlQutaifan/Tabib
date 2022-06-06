@@ -47,7 +47,7 @@ public class MedicalDrugsActivity extends AppCompatActivity {
 
     public void
     toAddMedic(View view) {
-        startActivity(new Intent(getApplication(), AddMedicActivity.class));
+        startActivity(new Intent(MedicalDrugsActivity.this, AddMedicActivity.class));
     }
 
     private void showMedics() {

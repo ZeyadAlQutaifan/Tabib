@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,8 +24,8 @@ import validation.Validation;
 
 public class AddMedicActivity extends AppCompatActivity {
 
-    TextInputEditText etMedicName ;
-    TextInputEditText etMedicUses ;
+    EditText etMedicName ;
+    EditText etMedicUses ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,6 @@ public class AddMedicActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_medic);
         etMedicName = findViewById(R.id.etMedicName);
         etMedicUses = findViewById(R.id.etMedicUses);
-
 
     }
 
