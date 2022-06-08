@@ -54,7 +54,6 @@
                     <TextView
                         android:id="@+id/txt_patient_name"
                         android:layout_width="0dp"
-
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="اسم المريض " />
@@ -89,7 +88,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="15 سنة " />
+                        android:text="26 سنة " />
 
                     <TextView
 
@@ -120,7 +119,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="XX" />
+                        android:text="غير متوفر" />
 
                     <TextView
 
@@ -151,7 +150,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="ذكر" />
+                        android:text="غير متوفر" />
 
                     <TextView
 
@@ -197,12 +196,12 @@
                             android:src="@drawable/left_arrow" />
 
                         <TextView
-                            android:id="@+id/textView33"
+                            android:id="@+id/txt_x_count"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="45"
+                            android:text="لا يوجد"
                             android:textColor="@color/white" />
 
                         <TextView
@@ -243,11 +242,12 @@
 
                         <TextView
 
+                            android:id="@+id/txt_report_count"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="5"
+                            android:text="لا يوجد"
                             android:textColor="@color/white" />
 
                         <TextView
@@ -288,11 +288,12 @@
 
                         <TextView
 
+                            android:id="@+id/txt_test_count"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="35"
+                            android:text="لا يوجد "
                             android:textColor="@color/white" />
 
                         <TextView
@@ -334,11 +335,12 @@
 
                         <TextView
 
+                            android:id="@+id/txt_medic_count"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="35"
+                            android:text="لا يوجد"
                             android:textColor="@color/white" />
 
                         <TextView
@@ -380,11 +382,12 @@
 
                         <TextView
 
+                            android:id="@+id/txt_diseases_count"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="0"
+                            android:text="لا يوجد"
                             android:textColor="@color/white" />
 
                         <TextView

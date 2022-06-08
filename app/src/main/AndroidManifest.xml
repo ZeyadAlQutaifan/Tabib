@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tabib">
         <activity
+            android:name="doctor_screens.PatientRecordsActivity"
+            android:exported="false" />
+        <activity
             android:name="user_screens.ShowRecordActivity"
             android:exported="false" />
         <activity
@@ -30,14 +33,12 @@
         <activity
             android:name="user_screens.AddRecordActivity"
             android:exported="false" />
-
         <activity
             android:name="doctor_screens.PatientSearchActivity"
             android:exported="true" />
         <activity
             android:name="doctor_screens.DoctorOTPActivity"
             android:exported="true" />
-
         <activity
             android:name="user_screens.DoctorsActivity"
             android:exported="false" />
@@ -61,9 +62,7 @@
             android:exported="true" />
         <activity
             android:name="user_screens.HomeActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
 
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
@@ -77,7 +76,7 @@
             android:exported="true" />
         <activity
             android:name="user_screens.SplashActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
